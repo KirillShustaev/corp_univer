@@ -1,0 +1,112 @@
+@import "normalize";
+
+@import "settings";
+
+.container {
+  padding-inline: min(6.25vw, 120px);
+}
+
+.hero {
+  background-color: rgba(17, 31, 74, 1);
+
+  padding-block: min(2.60vw, 50px);
+
+  &__titleBlockMain {
+    width: min(47.50vw, 912px);
+
+    column-gap: min(1.04vw, 20px);
+  }
+
+  &__topBlock {
+    justify-content: space-between;
+  }
+
+  &__titleBlock {
+    flex-direction: column;
+    width: 100%;
+    min-height: min(26.04vw, 500px);
+    border-radius: min(.52vw, 10px);
+    background-color: rgba(255, 255, 255, 1);
+    padding: min(2.60vw, 50px);
+
+    & > h1 {
+      max-width: 80%;
+      margin-bottom: min(1.04vw, 20px);
+      font-size: min(3.96vw, 76px);
+      font-weight: 700;
+      line-height: 100%;
+      color: rgba(32, 69, 182, 1);
+      letter-spacing: 0;
+    }
+
+    & > hr {
+      width: min(22.24vw, 427px);
+      height: 3px;
+      margin-bottom: min(1.04vw, 20px);
+      margin-left: 0;
+      background-color: rgba(32, 69, 182, 1);
+    }
+
+    & > span {
+      font-size: min(1.25vw, 24px);
+      font-weight: 400;
+      line-height: 100%;
+      color: rgba(0, 0, 0, 1);
+      letter-spacing: 0;
+    }
+  }
+
+  &__topDescr {
+    margin-top: auto;
+
+    column-gap: min(.52vw, 10px);
+
+    & > span {
+      padding: min(.52vw, 10px) min(1.56vw, 30px);
+      border: 1px solid rgba(32, 69, 182, 1);
+      border-radius: min(1.56vw, 30px);
+      font-size: min(1.25vw, 24px);
+      font-weight: 500;
+      line-height: 100%;
+      color: rgba(32, 69, 182, 1);
+      letter-spacing: 0;
+    }
+  }
+
+  &__topImgBlock {
+    width: min(38.96vw, 748px);
+    min-height: min(36.98vw, 710px);
+    border-radius: min(.52vw, 10px);
+    background-image: url(../img/hero_main.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__titleContent {
+    min-height: min(9.90vw, 190px);
+    padding: min(1.56vw, 30px);
+    border-radius: min(.52vw, 10px);
+    background-color: rgba(47, 59, 111, 1);
+
+    & h3 {
+      margin-bottom: min(.52vw, 10px);
+      font-size: min(1.25vw, 24px);
+      font-weight: 700;
+      line-height: 100%;
+      color: rgba(255, 255, 255, 1);
+      letter-spacing: 0;
+
+      & + span {
+        font-size: min(.83vw, 16px);
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  &__titleBlockBottom {
+    column-gap: min(1.04vw, 20px);
+  }
+}
