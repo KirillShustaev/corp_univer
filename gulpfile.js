@@ -14,7 +14,7 @@ const del = require("del")
 
 const path = {
     html: {
-        src: "src/index.html",
+        src: ["src/index.html", "src/index_1.html"],
         dest: "dist/"
     },
     styles: {

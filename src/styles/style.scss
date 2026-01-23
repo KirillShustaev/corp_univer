@@ -324,6 +324,37 @@
   }
 }
 
+.info {
+  padding-bottom: min(5.21vw, 100px);
+
+  &__titleBlockMain {
+    width: min(47.50vw, 912px);
+
+    column-gap: min(1.04vw, 20px);
+  }
+
+  & hr {
+    width: min(52.81vw, 1014px);
+    height: 3px;
+    background-color: rgba(32, 69, 182, 1);
+  }
+
+  & h2 {
+    font-size: min(2.08vw, 40px);
+    font-weight: 700;
+    line-height: 100%;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  &__titleBlock {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: min(1.56vw, 30px);
+  }
+}
+
 .visible {
   display: flex;
 }
