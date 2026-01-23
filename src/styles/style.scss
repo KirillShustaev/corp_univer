@@ -207,6 +207,12 @@
     color: rgba(255, 255, 255, 1);
     letter-spacing: 0;
     background-color: rgba(204, 204, 204, 1);
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &:hover {
+      color: white;
+      background-color: rgba(32, 69, 182, 1);
+    }
   }
 
   &__choiceBlock {
@@ -222,7 +228,7 @@
   }
 
   &__item {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 49%;
     min-height: min(15.05vw, 289px);
@@ -305,6 +311,7 @@
 
   &__more {
     display: block;
+    width: max-content;
     margin: 0 auto;
     padding: min(.52vw, 10px) min(1.56vw, 30px);
     border-radius: min(1.56vw, 30px);
@@ -315,4 +322,17 @@
     letter-spacing: 0;
     background-color: black;
   }
+}
+
+.visible {
+  display: flex;
+}
+
+.none {
+  display: none !important;
+}
+
+.active {
+  color: white;
+  background-color: rgba(32, 69, 182, 1);
 }
