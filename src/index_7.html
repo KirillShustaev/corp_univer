@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Электронный курс</div>
+                            <h1>Искусственный интеллект в действии </h1>
+                            <span>
+                                дополнительная образовательная программа — развитие гибких навыков
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Длительность: 2 часа</span>
+                                <span>Форма обучения: дистанционная</span>
+                                <span>Целевая аудитория: все сотрудники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                Продемонстрировать
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Продемонстрировать уровень развития технологий распознования речи и видеоряда
+                            </span>
+                            <span class="info__socDescrItem">
+                                Рассмотреть возможности использования ИИ-технологий в бытовой и профессиональной деятельности
+                            </span>
+                            <span class="info__socDescrItem">
+                                Познакомить с инструментами, дающими доступ к использованию ИИ-технологий
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                Как работают системы распознавания и синтеза речи и визуального контента
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                Формулировать запрос нейросети для получения желаемого результата
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                Эффективное взаимодействие с голосовыми помощниками
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Как работают системы распознавания речи
+                            </span>
+                            <span class="info__socDescrItem">
+                                Как технологии генерации изображений и видео могут изменить визуальный контент
+                            </span>
+                            <span class="info__socDescrItem">
+                                Как обработка естественного языка позволяет компьютерам понимать и генерировать текст
+                            </span>
+                            <span class="info__socDescrItem">
+                                Как компьютерное зрение применяется для анализа визуальной информации
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        let infoBtn = document.querySelectorAll('.info__switchBtn')
+        let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+        infoBtn.forEach(button => {
+            const targetBlock = button.getAttribute('data-target');
+
+            button.addEventListener('click', () => {
+                infoSocDescr.forEach(block => {
+                    if (block.classList.contains(targetBlock)) {
+                        block.classList.add("visible");
+                        block.classList.remove("none");
+                    } else {
+                        block.classList.add("none");
+                        block.classList.remove("visible");
+                    }
+                    });
+
+                for(let e of infoBtn) {
+                    e.classList.remove("active")
+                }
+                button.classList.add("active")
+            });
+        });
+    </script>
+</body>
+</html>
+

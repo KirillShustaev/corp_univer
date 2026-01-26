@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Электронный курс</div>
+                            <h1>Курс по автоматизации процессов. Создание личного робота-помощника</h1>
+                            <span>
+                                дополнительная образовательная программа — развитие гибких навыков
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Длительность: 5 академических часов</span>
+                                <span>Форма обучения: дистанционная</span>
+                                <span>Целевая аудитория: все сотрудники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                Научить сотрудников автоматизировать процессы с помощью конструктора Primo RPA — без навыков программирования
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Научить сотрудников автоматизировать процессы с помощью конструктора Primo RPA — без навыков программирования
+                            </span>
+                            <span class="info__socDescrItem">
+                                Научить сотрудников автоматизировать процессы с помощью конструктора Primo RPA — без навыков программирования
+                            </span>
+                            <span class="info__socDescrItem">
+                                Начать применять инструмент на практических кейсах уже в процессе прохождения курса
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                Как автоматизировать процессы с помощью конструктора Primo RPA — без навыков программирования
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                Начать применять инструмент на практических кейсах уже в процессе прохождения курса
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                Новый цифровой инструмент и потренируетесь применять его на практических кейсах
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Анализ текущего рабочего процесса
+                            </span>
+                            <span class="info__socDescrItem">
+                                Выбор инструментов для оптимизации
+                            </span>
+                            <span class="info__socDescrItem">
+                                Определение целесообразности роботизации и подготовка процесса
+                            </span>
+                            <span class="info__socDescrItem">
+                                Построение схемы автоматизации
+                            </span>
+                            <span class="info__socDescrItem">
+                                Создание и тестирование программного робота
+                            </span>
+                            <span class="info__socDescrItem">
+                                Оценка результатов работы
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        let infoBtn = document.querySelectorAll('.info__switchBtn')
+        let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+        infoBtn.forEach(button => {
+            const targetBlock = button.getAttribute('data-target');
+
+            button.addEventListener('click', () => {
+                infoSocDescr.forEach(block => {
+                    if (block.classList.contains(targetBlock)) {
+                        block.classList.add("visible");
+                        block.classList.remove("none");
+                    } else {
+                        block.classList.add("none");
+                        block.classList.remove("visible");
+                    }
+                    });
+
+                for(let e of infoBtn) {
+                    e.classList.remove("active")
+                }
+                button.classList.add("active")
+            });
+        });
+    </script>
+</body>
+</html>
+

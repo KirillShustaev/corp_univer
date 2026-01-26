@@ -30,7 +30,7 @@ const blocks = document.querySelectorAll('.prog__item');
 
 buttons.forEach(button => {
     const targetBlock = button.getAttribute('data-target');
-      const loadMoreButton = document.querySelector('.prog__more');
+    const loadMoreButton = document.querySelector('.prog__more');
 
     button.addEventListener('click', () => {
         blocks.forEach(block => {
