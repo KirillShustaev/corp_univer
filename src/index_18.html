@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Электронный курс</div>
+                            <h1>Мышление Шерлока</h1>
+                            <span>
+                                дополнительная образовательная программа — развитие гибких навыков
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Форма обучения: дистанционная</span>
+                                <span>Целевая аудитория: все сотрудники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                Развить умение анализировать окружающую информацию и улучшить навыки логического мышление
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Разобрать шаги, необходимые для определения эмоций
+                            </span>
+                            <span class="info__socDescrItem">
+                                Показать необходимость критического мышления при принятии решений
+                            </span>
+                            <span class="info__socDescrItem">
+                                Продемонстрировать факт наличия ловушек мышления, влияющих на наши выводы и решения
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                О том какие формы мышления существуют и как мы задействуем их в повседневной деятельности
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                Идентифицировать логические парадоксы и ловушки мышления
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                Освоите способы критического мышления, аргументации и убеждения
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Логическое мышление
+                            </span>
+                            <span class="info__socDescrItem">
+                                Научный метод или думай как ученый
+                            </span>
+                            <span class="info__socDescrItem">
+                                Ведение переговоров
+                            </span>
+                            <span class="info__socDescrItem">
+                                Развитие умозаключений
+                            </span>
+                            <span class="info__socDescrItem">
+                                Навыки принятия решений
+                            </span>
+                            <span class="info__socDescrItem">
+                                Иррациональное мышление
+                            </span>
+                            <span class="info__socDescrItem">
+                                Логические парадоксы
+                            </span>
+                            <span class="info__socDescrItem">
+                                Аргументация
+                            </span>
+                            <span class="info__socDescrItem">
+                                Критическое мышление
+                            </span>
+                            <span class="info__socDescrItem">
+                                Тренировка логики и отработка навыка
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        let infoBtn = document.querySelectorAll('.info__switchBtn')
+        let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+        infoBtn.forEach(button => {
+            const targetBlock = button.getAttribute('data-target');
+
+            button.addEventListener('click', () => {
+                infoSocDescr.forEach(block => {
+                    if (block.classList.contains(targetBlock)) {
+                        block.classList.add("visible");
+                        block.classList.remove("none");
+                    } else {
+                        block.classList.add("none");
+                        block.classList.remove("visible");
+                    }
+                    });
+
+                for(let e of infoBtn) {
+                    e.classList.remove("active")
+                }
+                button.classList.add("active")
+            });
+        });
+    </script>
+</body>
+</html>
+

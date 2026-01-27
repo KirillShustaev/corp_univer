@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Электронный курс</div>
+                            <h1>Управление эмоциями </h1>
+                            <span>
+                                дополнительная образовательная программа — развитие гибких навыков
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Форма обучения: дистанционная</span>
+                                <span>Целевая аудитория: все сотрудники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                Научить работать с эмоциями для повышения качества взаимодействия с людьми
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Разобрать шаги, необходимые для определения эмоций
+                            </span>
+                            <span class="info__socDescrItem">
+                                Развить умение выражать свои эмоции
+                            </span>
+                            <span class="info__socDescrItem">
+                                Продемонстрировать способы управления своими и чужими эмоциями
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                Как понимать, что вы чувствуете
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                Распозновать эмоции и настроение собеседника
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                Контроль своих эмоций и навыки управления эмоциями других людей
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Что такое эмоции
+                            </span>
+                            <span class="info__socDescrItem">
+                                Идентификация своих эмоций и эмоций другого как основа управления эмоциями
+                            </span>
+                            <span class="info__socDescrItem">
+                                О чём говорят наши эмоции и чувства
+                            </span>
+                            <span class="info__socDescrItem">
+                                Подавление эмоций: причины и последствия
+                            </span>
+                            <span class="info__socDescrItem">
+                                Как войти в нужное эмоциональное состояние
+                            </span>
+                            <span class="info__socDescrItem">
+                                Управление сильными эмоциями: страх и тревога
+                            </span>
+                            <span class="info__socDescrItem">
+                                Управление гневом
+                            </span>
+                            <span class="info__socDescrItem">
+                                Ментальные привычки для управления эмоциональным состоянием
+                            </span>
+                            <span class="info__socDescrItem">
+                                Эмоции и тело
+                            </span>
+                            <span class="info__socDescrItem">
+                                Управление чужими эмоциями
+                            </span>
+                            <span class="info__socDescrItem">
+                                Принятие эмоций другого человека
+                            </span>
+                            <span class="info__socDescrItem">
+                                Что делать, если не получилось выразить эмоции
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        let infoBtn = document.querySelectorAll('.info__switchBtn')
+        let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+        infoBtn.forEach(button => {
+            const targetBlock = button.getAttribute('data-target');
+
+            button.addEventListener('click', () => {
+                infoSocDescr.forEach(block => {
+                    if (block.classList.contains(targetBlock)) {
+                        block.classList.add("visible");
+                        block.classList.remove("none");
+                    } else {
+                        block.classList.add("none");
+                        block.classList.remove("visible");
+                    }
+                    });
+
+                for(let e of infoBtn) {
+                    e.classList.remove("active")
+                }
+                button.classList.add("active")
+            });
+        });
+    </script>
+</body>
+</html>
+
