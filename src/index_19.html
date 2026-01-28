@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Электронный курс</div>
+                            <h1>Подготовка эффективных управленческих отчетов и презентаций</h1>
+                            <span>
+                                дополнительная образовательная программа — программа повышения квалификации
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Длительность: 8 часов</span>
+                                <span>Форма обучения: дистанционная</span>
+                                <span>Целевая аудитория: все сотрудники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                Научиться выстраивать логичную структуру отчетного документа. Курс дает навык выбора важной информации и выстраивания четкой структуры составляемой сводки. Знание основ подготовки данных позволяет повысить качество подаваемых материалов и получать высокую оценку проделанной работы.
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Изучить алгоритм составления информативных и полезных отчетов для принятия решений руководителями
+                            </span>
+                            <span class="info__socDescrItem">
+                                Рассмотреть методы эффективного комбинирования текста, таблиц, графиков, диаграмм, иллюстраций в отчетах
+                            </span>
+                            <span class="info__socDescrItem">
+                                Изучить принципы эффективной коммуникации отчетов
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                <ul>
+                                    <li>
+                                        Как сформулировать цель отчета и учесть интересы пользователей отчетов
+                                    </li>
+                                    <li>
+                                        Как подобрать полезное содержание: текст, таблицы, графики, диаграммы, иллюстрации
+                                    </li>
+                                    <li>
+                                        Как лучше визуализировать информацию, применить иконки, иллюстрации, указать «сигналы тревоги»
+                                    </li>
+                                    <li>
+                                        Как международные стандарты бизнес-коммуникации помогают повысить качество отчетов
+                                    </li>
+                                </ul>
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                Составлять настольные слайдовые отчеты
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                <ul>
+                                    <li>Правила оформления слайдовых отчетов</li>
+                                    <li>
+                                Построение структуры отчета и удобной навигации</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Подготовка эффективных управленческих отчетов — необходимый навык как для специалистов, так и для руководителей разного уровня. Управленческий отчет включает данные по выбранным направлениям деятельности предприятия, собранные в единый лаконичный документ. Подготовка качественного документа требует понимания того, как строится управленческая отчетность, как составить графики и таблицы, чтобы привлечь внимание к самому важному, как представленные данные влияют на принятие решений и развитие компании. Эффективные управленческие отчеты — важный инструмент менеджмента, влияющий на достижение целей, рост бизнеса и результаты деятельности
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        let infoBtn = document.querySelectorAll('.info__switchBtn')
+        let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+        infoBtn.forEach(button => {
+            const targetBlock = button.getAttribute('data-target');
+
+            button.addEventListener('click', () => {
+                infoSocDescr.forEach(block => {
+                    if (block.classList.contains(targetBlock)) {
+                        block.classList.add("visible");
+                        block.classList.remove("none");
+                    } else {
+                        block.classList.add("none");
+                        block.classList.remove("visible");
+                    }
+                    });
+
+                for(let e of infoBtn) {
+                    e.classList.remove("active")
+                }
+                button.classList.add("active")
+            });
+        });
+    </script>
+</body>
+</html>
+

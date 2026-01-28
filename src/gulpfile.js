@@ -15,7 +15,7 @@ const del = require("del")
 const path = {
     html: {
         src: ["src/index.html", "src/index_1.html", "src/index_2.html", "src/index_3.html", "src/index_4.html", "src/index_5.html", "src/index_6.html", "src/index_7.html", "src/index_8.html", "src/index_9.html",
-        "src/index_10.html", "src/index_11.html", "src/index_12.html", "src/index_13.html","src/index_14.html","src/index_15.html","src/index_16.html","src/index_17.html","src/index_18.html", "src/index_19.html", "src/index_20.html", "src/index_21.html", "src/index_22.html", "src/index_23.html","src/index_24.html","src/index_25.html"
+        "src/index_10.html", "src/index_11.html", "src/index_12.html", "src/index_13.html","src/index_14.html","src/index_15.html","src/index_16.html","src/index_17.html","src/index_18.html"
         ],
         dest: "dist/"
     },

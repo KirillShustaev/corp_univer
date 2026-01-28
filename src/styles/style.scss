@@ -420,6 +420,14 @@
     line-height: normal;
     color: #000000;
 
+    &:has(> b) {
+      display: block;
+
+      &::after {
+        top: 0;
+      }
+    }
+
     &::after {
       @include back_img;
       content: "";
@@ -430,8 +438,23 @@
       background-image: url(../img/ok.svg);
     }
 
+    & > b {
+      display: block;
+      margin-bottom: min(.52vw, 10px);
+      font-size: min(1.25vw, 24px);
+      font-weight: 700;
+      line-height: 100%;
+      color: rgba(32, 69, 182, 1);
+      letter-spacing: 0;
+    }
+
     &_withoutCheck {
       display: block;
+
+      & > ul > li {
+        margin-left: min(1.04vw, 20px);
+        list-style-type: disc;
+      }
 
       &::after {
         display: none;

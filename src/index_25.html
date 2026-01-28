@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Старт в феврале 2026 года</div>
+                            <h1>Эффективное управление конфликтами и противодействие манипуляциям</h1>
+                            <span>
+                                дополнительная образовательная программа – программа повышения квалификации
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Длительность: 16 академических часов</span>
+                                <span>Форма обучения: очно-заочная</span>
+                                <span>Целевая аудитория: руководители</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Условия зачисления на программу
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_5" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                формирование у обучающихся знаний, умений и навыков, необходимых в профессиональной деятельности – совершенствование практических конфликтологических компетенций в области управления конфликтами, обеспечения эффективного управления конфликтами и противодействия манипуляциям
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Познакомить участников с приемами выявления манипулятивного поведения и проявления пассивной агрессии
+                            </span>
+                            <span class="info__socDescrItem">
+                                Отработать техники управления конфликтами и межличностного взаимодействия для создания благоприятного социально-психологического климата в команде
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                <ul>
+                                    <li>техники коммуникации для урегулирования конфликтов</li>
+                                    <li>формы проявления пассивно-агрессивного поведения</li>
+                                    <li> причины возникновения гнева</li>
+                                </ul>
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                <ul>
+                                    <li>выявлять манипулятивное поведение</li>
+                                    <li>противодействовать токсичному поведению в команде</li>
+                                    <li>предупреждать возникновение гнева</li>
+                                </ul>
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                <ul>
+                                    <li>навыки своевременного реагирования на конфликтные ситуации</li>
+                                    <li>умение выражать свои эмоции с учетом партнерской позиции в конфликте</li>
+                                    <li>навык корректного реагирования на пассивно-агрессивное поведение в профессиональной среде</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Для обучения по программам повышения квалификации необходимо иметь среднее профессиональное или высшее образование, или находиться в процессе его получения. Во втором случае удостоверение о повышении квалификации будет выдано после получения диплома о высшем/среднем профессиональном образовании
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_5 none">
+                            <span class="info__socDescrItem">
+                                Конфликты: хороший, плохой, злой
+                            </span>
+                            <span class="info__socDescrItem">
+                                Здоровый климат в коллективе: как не допустить распространение токсичности
+                            </span>
+                            <span class="info__socDescrItem">
+                                Я в конфликте: как управлять гневом
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        let infoBtn = document.querySelectorAll('.info__switchBtn')
+        let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+        infoBtn.forEach(button => {
+            const targetBlock = button.getAttribute('data-target');
+
+            button.addEventListener('click', () => {
+                infoSocDescr.forEach(block => {
+                    if (block.classList.contains(targetBlock)) {
+                        block.classList.add("visible");
+                        block.classList.remove("none");
+                    } else {
+                        block.classList.add("none");
+                        block.classList.remove("visible");
+                    }
+                    });
+
+                for(let e of infoBtn) {
+                    e.classList.remove("active")
+                }
+                button.classList.add("active")
+            });
+        });
+    </script>
+</body>
+</html>
+
