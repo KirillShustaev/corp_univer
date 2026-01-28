@@ -109,7 +109,43 @@
     background-size: cover;
 
     &_other {
+      flex-direction: column;
+      justify-content: flex-end;
       width: min(27.71vw, 532px);
+      padding: min(2.60vw, 50px);
+      &:has(h2) {
+        background-image: url(../img/doc.jpg);
+      }
+
+      & > h2 {
+        margin-bottom: min(1.04vw, 20px);
+        font-size: min(1.56vw, 30px);
+        font-weight: 700;
+        font-style: normal;
+        line-height: 100%; /* 30px */
+        color: #ffffff;
+      }
+
+      & > p {
+        margin-bottom: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: #ffffff;
+      }
+
+      & > a {
+        width: max-content;
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 500;
+        font-style: normal;
+        line-height: normal;
+        color: #ffffff;
+        background: #00af8d;
+      }
     }
   }
 
