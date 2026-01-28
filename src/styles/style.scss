@@ -507,6 +507,69 @@
   }
 }
 
+.doc {
+  padding-top: min(2.86vw, 55px);
+  padding-bottom: min(5.21vw, 100px);
+  background-color: rgba(245, 245, 247, 1);
+
+  &__titleBlockMain {
+    width: min(47.50vw, 912px);
+
+    column-gap: min(1.04vw, 20px);
+  }
+
+  & hr {
+    width: min(37.34vw, 717px);
+    height: 3px;
+    background-color: rgba(32, 69, 182, 1);
+  }
+
+  & h2 {
+    font-size: min(2.08vw, 40px);
+    font-weight: 700;
+    line-height: 100%;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  &__titleBlock {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: min(1.56vw, 30px);
+  }
+
+  &__list {
+    column-gap: min(1.04vw, 20px);
+
+    & > li {
+      width: min(13.70vw, 263px);
+      height: min(11.25vw, 216px);
+      padding: min(1.56vw, 30px);
+      border-radius: min(.52vw, 10px);
+      background-color: white;
+
+      & > div {
+        margin-bottom: min(1.04vw, 20px);
+
+        & + p {
+          max-width: 90%;
+          font-size: min(.94vw, 18px);
+          font-weight: 400;
+          line-height: 100%;
+          color: black;
+          letter-spacing: 0;
+        }
+
+        & > svg {
+          width: min(2.29vw, 44px);
+          height: min(2.29vw, 44px);
+        }
+      }
+    }
+  }
+}
+
 .visible {
   display: flex;
 }
