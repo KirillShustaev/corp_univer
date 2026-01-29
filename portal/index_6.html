@@ -1,0 +1,1051 @@
+<style>
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+    html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%
+    }
+
+    h1 {
+        font-size: 2em
+    }
+
+    hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: monospace, monospace;
+        font-size: 1em
+    }
+
+    a {
+        background-color: transparent;
+        text-decoration: none;
+        cursor: pointer
+    }
+
+    abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted
+    }
+
+    b,
+    strong {
+        font-weight: bolder
+    }
+
+    small {
+        font-size: 80%
+    }
+
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline
+    }
+
+    sub {
+        bottom: -.25em
+    }
+
+    sup {
+        top: -.5em
+    }
+
+    img {
+        border-style: none
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0
+    }
+
+    button,
+    input {
+        overflow: visible
+    }
+
+    button,
+    select {
+        text-transform: none
+    }
+
+    [type=button],
+    [type=reset],
+    [type=submit],
+    button {
+        -webkit-appearance: button
+    }
+
+    [type=button]::-moz-focus-inner,
+    [type=reset]::-moz-focus-inner,
+    [type=submit]::-moz-focus-inner,
+    button::-moz-focus-inner {
+        border-style: none;
+        padding: 0
+    }
+
+    [type=button]:-moz-focusring,
+    [type=reset]:-moz-focusring,
+    [type=submit]:-moz-focusring,
+    button:-moz-focusring {
+        outline: ButtonText dotted 1px
+    }
+
+    fieldset {
+        padding: .35em .75em .625em
+    }
+
+    legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal
+    }
+
+    progress {
+        vertical-align: baseline
+    }
+
+    textarea {
+        overflow: auto
+    }
+
+    [type=checkbox],
+    [type=radio] {
+        box-sizing: border-box;
+        padding: 0
+    }
+
+    [type=number]::-webkit-inner-spin-button,
+    [type=number]::-webkit-outer-spin-button {
+        height: auto
+    }
+
+    [type=search] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px
+    }
+
+    [type=search]::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit
+    }
+
+    details {
+        display: block
+    }
+
+    summary {
+        display: list-item
+    }
+
+    [hidden],
+    template {
+        display: none
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 10px;
+        scroll-behavior: smooth
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: inherit
+    }
+
+    @font-face {
+        font-family: TT_Moscow;
+        font-weight: 400;
+        font-style: normal;
+        src: local("TT_Moscow-Regular"), url(../fonts/TT_Moscow_Economy_Regular.ttf) format("truetype");
+        font-display: swap
+    }
+
+    @font-face {
+        font-family: TT_Moscow;
+        font-weight: 500;
+        font-style: normal;
+        src: local("TT_Moscow-Medium"), url(../fonts/TT_Moscow_Economy_Medium.ttf) format("truetype");
+        font-display: swap
+    }
+
+    @font-face {
+        font-family: TT_Moscow;
+        font-weight: 700;
+        font-style: normal;
+        src: local("TT_Moscow-Bold"), url(../fonts/TT_Moscow_Economy_Bold.ttf) format("truetype");
+        font-display: swap
+    }
+
+    body {
+        margin: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 360px;
+        min-height: 100vh;
+        font-family: TT_Moscow, sans-serif;
+        background-color: #fff
+    }
+
+    section {
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    main {
+        display: block;
+        flex-grow: 1
+    }
+
+    footer {
+        flex-shrink: 0
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 !important;
+        list-style-type: none !important
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        outline: 0;
+        background-color: transparent;
+        cursor: pointer
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        margin: 0;
+        padding: 0
+    }
+
+    input {
+        border: none;
+        outline: 0;
+        background-color: transparent
+    }
+
+    address {
+        font-style: normal
+    }
+
+    select {
+        outline: 0;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none
+    }
+
+    .container {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding-inline: min(6.25vw, 120px)
+    }
+
+    .flex {
+        display: flex
+    }
+
+    .grid {
+        display: grid
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+        -webkit-appearance: textfield;
+        appearance: textfield
+    }
+
+    input[type=search]::-webkit-search-cancel-button,
+    input[type=search]::-webkit-search-decoration,
+    input[type=search]::-webkit-search-results-button,
+    input[type=search]::-webkit-search-results-decoration {
+        display: none
+    }
+
+    .hero {
+        margin-bottom: min(2.6vw, 50px);
+        background-color: #111f4a;
+        padding-block: min(2.6vw, 50px)
+    }
+
+    .hero__titleBlockMain {
+        width: min(47.5vw, 912px);
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .hero__titleBlockMain:has(.hero__titleBlock_other) {
+        display: flex;
+        width: min(58.75vw, 1128px);
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .hero__topBlock {
+        justify-content: space-between;
+        margin-bottom: min(1.04vw, 20px);
+        /* -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px) */
+    }
+
+    .hero__titleBlock {
+        flex-direction: column;
+        width: 100%;
+        min-height: min(26.04vw, 500px);
+        margin-bottom: min(1.04vw, 20px);
+        padding: min(2.6vw, 50px);
+        border-radius: min(.52vw, 10px);
+        background-color: #fff
+    }
+
+    .hero__titleBlock>h1 {
+        max-width: 80%;
+        margin-bottom: min(1.04vw, 20px);
+        font-size: min(3.96vw, 76px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #2045b6;
+        letter-spacing: 0
+    }
+
+    .hero__titleBlock>hr {
+        width: min(22.24vw, 427px);
+        height: 3px;
+        margin-bottom: min(1.04vw, 20px);
+        margin-left: 0;
+        background-color: #2045b6
+    }
+
+    .hero__titleBlock>span {
+        font-size: min(1.25vw, 24px);
+        font-weight: 400;
+        line-height: 100%;
+        color: #000;
+        letter-spacing: 0
+    }
+
+    .hero__titleBlock_other {
+        width: min(58.75vw, 1128px);
+        height: 100%
+    }
+
+    .hero__titleBlock_other>h1 {
+        max-width: 100%;
+        font-size: min(2.6vw, 50px);
+        line-height: 115%
+    }
+
+    .hero__topDescr {
+        flex-wrap: wrap;
+        margin-top: auto;
+        gap: min(.52vw, 10px)
+    }
+
+    .hero__topDescr>span {
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border: 1px solid #2045b6;
+        border-radius: min(1.56vw, 30px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 500;
+        line-height: 100%;
+        color: #2045b6;
+        letter-spacing: 0
+    }
+
+    .hero__topImgBlock {
+        width: 49%;
+        min-height: min(36.98vw, 710px);
+        border-radius: min(.52vw, 10px);
+        background-image: url(Publications/72704/Image/hero_main_sshch.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+    }
+
+    .hero__topImgBlock_other {
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 31%;
+        padding: min(2.6vw, 50px)
+    }
+
+    .hero__topImgBlock_other:has(h2) {
+        background-image: url(Publications/72704/Image/doc.jpg)
+    }
+
+    .hero__topImgBlock_other>h2 {
+        margin-bottom: min(1.04vw, 20px);
+        font-size: min(1.56vw, 30px);
+        font-weight: 700;
+        font-style: normal;
+        line-height: 100%;
+        color: #fff
+    }
+
+    .hero__topImgBlock_other>p {
+        margin-bottom: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: #fff
+    }
+
+    .hero__topImgBlock_other>a {
+        width: -moz-max-content;
+        width: max-content;
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 500;
+        font-style: normal;
+        line-height: normal;
+        color: #fff;
+        background: #00af8d
+    }
+
+    .hero__titleContent {
+        max-width: min(28.85vw, 554px);
+        min-height: min(9.9vw, 190px);
+        padding: min(1.56vw, 30px);
+        border-radius: min(.52vw, 10px);
+        background-color: #2f3b6f
+    }
+
+    .hero__titleContent h3 {
+        margin-bottom: min(.52vw, 10px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #fff;
+        letter-spacing: 0
+    }
+
+    .hero__titleContent h3+span {
+        font-size: min(.83vw, 16px);
+        font-weight: 400;
+        line-height: 100%;
+        color: #fff;
+        letter-spacing: 0
+    }
+
+    .hero__titleBlockBottom {
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .hero__bottomBlock {
+        justify-content: space-between;
+        /* -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px) */
+    }
+
+    .hero__bottomBlock>h3 {
+        font-size: min(1.25vw, 24px);
+        font-weight: 700;
+        font-style: Bold;
+        line-height: 100%;
+        letter-spacing: 0
+    }
+
+    .hero__bottomContent {
+        align-items: center;
+        width:49%;
+        min-height: min(8.8vw, 169px);
+        border-radius: min(.52vw, 10px)
+    }
+
+    .hero__bottomContent_1 {
+        background-image: url(Publications/72704/Image/hero_learn.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+    }
+
+    .hero__bottomContent_2 {
+        background-image: url(Publications/72704/Image/hero_sert.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover
+    }
+
+    .hero__bottomContent:nth-child(2)>h3 {
+        color: #000
+    }
+
+    .hero__bottomContent>h3 {
+        padding-left: min(13.02vw, 250px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #fff;
+        letter-spacing: 0
+    }
+
+    .hero__appLink {
+        display: grid;
+        width: -moz-max-content;
+        width: max-content;
+        margin-top: min(1.56vw, 30px);
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 500;
+        font-style: normal;
+        line-height: normal;
+        color: #fff;
+        background: #00af8d;
+        place-items: center
+    }
+
+    .hero__correctionOther {
+        display: grid;
+        width: -moz-max-content;
+        width: max-content;
+        margin-bottom: min(2.6vw, 50px);
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 500;
+        font-style: normal;
+        line-height: normal;
+        color: #fff;
+        background: #2f3b6f;
+        place-items: center
+    }
+
+    .prog {
+        padding-bottom: min(5.21vw, 100px)
+    }
+
+    .prog h2 {
+        font-size: min(2.08vw, 40px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #000;
+        letter-spacing: 0;
+        text-transform: uppercase
+    }
+
+    .prog__titleBlock {
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: min(1.56vw, 30px)
+    }
+
+    .prog hr {
+        width: min(62.66vw, 1203px);
+        height: 3px;
+        background-color: #2045b6
+    }
+
+    .prog__choiceBlock {
+        flex-wrap: wrap;
+        gap: min(.78vw, 15px);
+        margin-bottom: min(1.56vw, 30px)
+    }
+
+    .prog__choice {
+        padding: min(.52vw, 10px) min(1.04vw, 20px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 500;
+        line-height: 100%;
+        color: #fff;
+        letter-spacing: 0;
+        background-color: #ccc;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out
+    }
+
+    .prog__choice:hover {
+        color: #fff;
+        background-color: #2045b6
+    }
+
+    .prog__programmList {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: min(2.6vw, 50px);
+        gap: min(1.04vw, 20px)
+    }
+
+    .prog__item {
+        display: none;
+        flex-direction: column;
+        width: 49%;
+        min-height: min(15.05vw, 289px);
+        padding: min(2.08vw, 40px);
+        padding-bottom: min(3.65vw, 70px);
+        border-radius: min(.52vw, 10px);
+        background-color: #f5f5f7
+    }
+
+    .prog__item>h4 {
+        margin-bottom: min(1.04vw, 20px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #000;
+        letter-spacing: 0
+    }
+
+    .prog__item>a {
+        width: -moz-max-content;
+        width: max-content;
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 500;
+        line-height: 100%;
+        color: #fff;
+        letter-spacing: 0;
+        background-color: #00af8d
+    }
+
+    .prog__detailsBlock {
+        flex-wrap: wrap;
+        margin-top: auto;
+        margin-bottom: min(2.08vw, 40px);
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .prog__detailsBlock>span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: -moz-max-content;
+        width: max-content;
+        padding-left: min(1.67vw, 32px);
+        font-size: min(.94vw, 18px);
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0
+    }
+
+    .prog__detailsBlock>span:first-child::after {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: min(1.2vw, 23px);
+        height: min(.89vw, 17px);
+        background-image: url(Publications/72704/Image/1.svg)
+    }
+
+    .prog__detailsBlock>span:nth-child(2)::after {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: min(.89vw, 17px);
+        height: min(.89vw, 17px);
+        background-image: url(Publications/72704/Image/2.svg)
+    }
+
+    .prog__detailsBlock>span:last-child::after {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: min(.89vw, 17px);
+        height: min(.78vw, 15px);
+        background-image: url(Publications/72704/Image/3.svg)
+    }
+
+    .prog__more {
+        display: block;
+        width: -moz-max-content;
+        width: max-content;
+        margin: 0 auto;
+        padding: min(.52vw, 10px) min(1.56vw, 30px);
+        border-radius: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 500;
+        line-height: 100%;
+        color: #fff;
+        letter-spacing: 0;
+        background-color: #000
+    }
+
+    .info {
+        padding-bottom: min(5.21vw, 100px)
+    }
+
+    .info__titleBlockMain {
+        width: min(47.5vw, 912px);
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .info hr {
+        width: min(52.81vw, 1014px);
+        height: 3px;
+        background-color: #2045b6
+    }
+
+    .info h2 {
+        font-size: min(2.08vw, 40px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #000;
+        letter-spacing: 0;
+        text-transform: uppercase
+    }
+
+    .info__titleBlock {
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: min(1.56vw, 30px)
+    }
+
+    .info__socDescrItem {
+        position: relative;
+        display: flex;
+        padding-left: min(1.56vw, 30px);
+        font-size: min(.94vw, 18px);
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: #000
+    }
+
+    .info__socDescrItem:has(>b) {
+        display: block
+    }
+
+    .info__socDescrItem:has(>b)::after {
+        top: 0
+    }
+
+    .info__socDescrItem::after {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: min(.89vw, 17px);
+        height: min(.89vw, 17px);
+        background-image: url(Publications/72704/Image/ok.svg)
+    }
+
+    .info__socDescrItem>b {
+        display: block;
+        margin-bottom: min(.52vw, 10px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #2045b6;
+        letter-spacing: 0
+    }
+
+    .info__socDescrItem_withoutCheck {
+        display: block
+    }
+
+    .info__socDescrItem_withoutCheck>ul>li {
+        margin-left: min(1.04vw, 20px);
+        list-style-type: disc
+    }
+
+    .info__socDescrItem_withoutCheck::after {
+        display: none
+    }
+
+    .info__socDescrItem_withoutCheck>span {
+        display: block;
+        margin-bottom: min(.52vw, 10px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        color: #2045b6
+    }
+
+    .info__descrBlock {
+        width: min(65.36vw, 1255px);
+        min-height: min(10.78vw, 207px);
+        padding: min(1.56vw, 30px);
+        border-radius: min(.52vw, 10px);
+        background-color: #f5f5f7
+    }
+
+    .info__switchBlock {
+        justify-content: space-between
+    }
+
+    .info__switchBtn {
+        font-size: min(1.25vw, 24px);
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: #2045b6
+    }
+
+    .info ul:has(.info__switchBtn) {
+        display: flex;
+        flex-direction: column;
+        row-gap: min(1.04vw, 20px)
+    }
+
+    .info__socDescr {
+        display: flex;
+        flex-direction: column;
+        row-gap: min(1.04vw, 20px)
+    }
+
+    .doc {
+        padding-top: min(2.86vw, 55px);
+        padding-bottom: min(5.21vw, 100px);
+        background-color: #f5f5f7
+    }
+
+    .doc__titleBlockMain {
+        width: min(47.5vw, 912px);
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .doc hr {
+        width: min(37.34vw, 717px);
+        height: 3px;
+        background-color: #2045b6
+    }
+
+    .doc h2 {
+        font-size: min(2.08vw, 40px);
+        font-weight: 700;
+        line-height: 100%;
+        color: #000;
+        letter-spacing: 0;
+        text-transform: uppercase
+    }
+
+    .doc__titleBlock {
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: min(1.56vw, 30px)
+    }
+
+    .doc__list {
+        -moz-column-gap: min(1.04vw, 20px);
+        column-gap: min(1.04vw, 20px)
+    }
+
+    .doc__list>li {
+        width: min(13.7vw, 263px);
+        height: min(11.25vw, 216px);
+        padding: min(1.56vw, 30px);
+        border-radius: min(.52vw, 10px);
+        background-color: #fff
+    }
+
+    .doc__list>li>div {
+        margin-bottom: min(1.04vw, 20px)
+    }
+
+    .doc__list>li>div+p {
+        max-width: 90%;
+        font-size: min(.94vw, 18px);
+        font-weight: 400;
+        line-height: 100%;
+        color: #000;
+        letter-spacing: 0
+    }
+
+    .doc__list>li>div>svg {
+        width: min(2.29vw, 44px);
+        height: min(2.29vw, 44px)
+    }
+
+    .visible {
+        display: flex
+    }
+
+    .none {
+        display: none !important
+    }
+
+    .active {
+        color: #fff;
+        background-color: #2045b6
+    }
+
+    /*# sourceMappingURL=style.min.css.map */
+</style>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__topBlock flex">
+                    <div class="hero__titleBlockMain">
+                        <div class="hero__titleBlock hero__titleBlock_other flex">
+                            <div class="hero__correctionOther">Электронный курс</div>
+                            <h1>Цифровая этика</h1>
+                            <span>
+                                дополнительная образовательная программа — развитие гибких навыков
+                            </span>
+                            <a class="hero__appLink" href="#">Подать заявку</a>
+                            <div class="hero__topDescr flex">
+                                <span>Длительность: 1 академический час</span>
+                                <span>Форма обучения: дистанционная</span>
+                                <span>Целевая аудитория: все сотрудники</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__topImgBlock hero__topImgBlock_other"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="info">
+            <div class="container info__container">
+                <div class="info__titleBlock flex">
+                    <h2>ИНФОРМАЦИЯ ОБ ОБУЧЕНИИ</h2>
+                    <hr>
+                </div>
+                <div class="info__switchBlock flex">
+                    <ul>
+                        <li>
+                            <button data-target="info_btn_1" class="info__switchBtn">
+                                Цель обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_2" class="info__switchBtn">
+                                Задачи обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_3" class="info__switchBtn">
+                                Результаты обучения
+                            </button>
+                        </li>
+                        <li>
+                            <button data-target="info_btn_4" class="info__switchBtn">
+                                Содержание программы
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="info__descrBlock">
+                        <div class="info__socDescr info_btn_1">
+                            <span class="info__socDescrItem">
+                                Освоить принципы цифрового этикета, чтобы эффективно выстраивать профессиональную коммуникацию в онлайн-среде, избегать конфликтов, укреплять личный имидж и имидж организации
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_2 none">
+                            <span class="info__socDescrItem">
+                                Понять основы цифровой этики, её роль в личной и профессиональной жизни
+                            </span>
+                            <span class="info__socDescrItem">
+                                Научиться корректному общению в соцсетях, мессенджерах и рабочих чата
+                            </span>
+                            <span class="info__socDescrItem">
+                                Освоить инструменты для развития публичного образа и защиты репутации организации в цифровой среде
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_3 none">
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Узнаете</span>
+                                Освоить инструменты для развития публичного образа и защиты репутации организации в цифровой среде
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Научитесь</span>
+                                Создавать и поддерживать профессиональный имидж в цифровом пространстве
+                            </span>
+                            <span class="info__socDescrItem info__socDescrItem_withoutCheck">
+                                <span>Освоите</span>
+                                Инструменты минимизации рисков репутационных потерь для себя и организации
+                            </span>
+                        </div>
+                        <div class="info__socDescr info_btn_4 none">
+                            <span class="info__socDescrItem">
+                                Цифровая этика и личный бренд
+                            </span>
+                            <span class="info__socDescrItem">
+                                Корпоративные и социальные сети
+                            </span>
+                            <span class="info__socDescrItem">
+                                Мессенджеры и корпоративные чаты
+                            </span>
+                            <span class="info__socDescrItem">
+                                Итоговый тест
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script>
+    let infoBtn = document.querySelectorAll('.info__switchBtn')
+    let infoSocDescr = document.querySelectorAll('.info__socDescr')
+
+    infoBtn.forEach(button => {
+        const targetBlock = button.getAttribute('data-target');
+
+        button.addEventListener('click', () => {
+            infoSocDescr.forEach(block => {
+                if (block.classList.contains(targetBlock)) {
+                    block.classList.add("visible");
+                    block.classList.remove("none");
+                } else {
+                    block.classList.add("none");
+                    block.classList.remove("visible");
+                }
+                });
+
+            for(let e of infoBtn) {
+                e.classList.remove("active")
+            }
+            button.classList.add("active")
+        });
+    });
+</script>
